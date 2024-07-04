@@ -6,27 +6,32 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #6e3cf5;
+    background-color: #f0f0f0;
 }
 
 #app {
     text-align: center;
     width: 80%;
     max-width: 600px;
-    background-color: #6e3cf5;
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#search-section {
+    margin-bottom: 20px;
+}
+
 h1 {
-    color: #ffffff; /* Purple */
+    color: #6a0dad; /* Purple */
+    margin-bottom: 20px;
 }
 
 #location-input {
     width: 100%;
     padding: 10px;
-    margin: 20px 0;
+    margin-bottom: 10px;
     font-size: 18px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -34,23 +39,19 @@ h1 {
     box-sizing: border-box;
 }
 
+#search-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #6a0dad; /* Purple */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 #map {
     height: 400px;
     margin: 20px 0;
     border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-#weather {
-    margin-top: 20px;
-    font-size: 18px;
-}
-
-.loading {
-    font-size: 24px;
-}
-
-.error {
-    color: red;
-    font-size: 18px;
-}
+   

@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const weatherElement = document.getElementById('weather');
     const mapElement = document.getElementById('map');
     const locationInput = document.getElementById('location-input');
+    const searchButton = document.getElementById('search-button');
     let map;
     let marker;
 
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function fetchWeather(latitude, longitude) {
-        const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';
+        const apiKey = '9f9623155f178086c93848dd96d1ad2b';
         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
         fetch(url)
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
             .catch(error => {
+                console.error('Error fetching weather data:', error);
                 showError('Error fetching weather data.');
             });
     }
@@ -84,6 +86,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    handlePlaceSelect();
+    searchButton.addEventListener('click', () => {
+        const place = locationInput.value;
+        if (place) {
+            showLoading('Fetching location...');
+            handlePlaceSelect();
+        } else {
+            showError('Please enter a location.');
+        }
+    });
+
     getLocation();
 });

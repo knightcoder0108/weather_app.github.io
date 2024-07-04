@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places" async defer></script>
+    <title>Weather API</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQu5my36Cjeli4ret4pm0BvF-yucnx0tU&libraries=places" async defer></script>
 </head>
 <body>
     <div id="app">
-        <h1>Weather App</h1>
-        <input id="location-input" type="text" placeholder="Enter a location">
+        <div id="search-section">
+            <h1>Weather API</h1>
+            <input id="location-input" type="text" placeholder="Enter a location">
+            <button id="search-button">Search</button>
+        </div>
         <div id="map"></div>
         <div id="weather"></div>
     </div>
