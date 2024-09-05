@@ -9,11 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function showLoading(message) {
         weatherElement.innerHTML = `<div class="loading">${message}</div>`;
     }
-
     function showError(message) {
         weatherElement.innerHTML = `<div class="error">${message}</div>`;
     }
-
     function initializeMap(latitude, longitude) {
         const location = { lat: latitude, lng: longitude };
         if (!map) {
@@ -30,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
             marker.setPosition(location);
         }
     }
-
     function fetchWeather(latitude, longitude) {
         const apiKey = '9f9623155f178086c93848dd96d1ad2b';
         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
@@ -52,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 showError('Error fetching weather data.');
             });
     }
-
     function handlePlaceSelect() {
         const autocomplete = new google.maps.places.Autocomplete(locationInput);
         autocomplete.addListener('place_changed', () => {
@@ -95,6 +91,5 @@ document.addEventListener('DOMContentLoaded', () => {
             showError('Please enter a location.');
         }
     });
-
-    getLocation();
+getLocation();
 });
